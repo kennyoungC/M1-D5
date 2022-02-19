@@ -1,74 +1,90 @@
-/* EXERCISE 11
+function writeLine(title) {
+  console.log(`\n>-----------------< ${title} >-----------------<`);
+}
+writeLine("EXERCISE 12");
+/* 
 Write a function "checkArray" which receives an array of random numbers (created with giveMeRandom) and prints, for each item, whether it's bigger than 5.
 The function returns the sum of the numbers bigger than 5.
 */
-let writeLine = function (title) {
-  console.log(`\n>-----------------< ${title} >-----------------<`);
-};
-writeLine("EXERCISE 1");
 /* WRITE YOUR CODE HERE */
-
-/* EXERCISE 12
+writeLine("EXERCISE 12");
+/* 
 In your eCommerce you have an array of objects called shoppingCart. In this array you have a number of objects with a price, a name, an id and the quantity to be shipped.
 Create a function "shippingCartTotal" which calculates the total due to the shop.
 */
 
 /* WRITE YOUR CODE HERE */
-
-/* EXERCISE 13
+writeLine("EXERCISE 13");
+/*
 In your eCommerce you have an array of objects called shoppingCart. In this array you have a number of objects with a price, a name, an id and the quantity to be shipped.
 Create a function "addToShoppingCart" which receives a new object, adds it to shoppingCart and returns the total number of items in the shoppingCart.
 */
 
-/* WRITE YOUR CODE HERE */
+function addToShoppingCart(addOrder) {
+  console.log(arraysOfObject);
+  for (let i = 0; (i = arraysOfObject.length); i++)
+    return [...arraysOfObject.concat(addOrder)];
+}
+let arraysOfObject = [
+  { price: 3, name: "yusuf", id: "germany", quatity: 10 },
+  { price: 5, name: "taiwo", id: "england", quatity: 16 },
+  { price: 7, name: "abiodun", id: "spain", quatity: 25 },
+];
+// let newOrder = [
+//   { price: 7, name: "obi", id: "spain", quantity: 25 },
+//   { price: 3, name: "yusuf", id: "germany", quatity: 10 },
+// ];
+let newOrder = { price: 9, name: "yusuf", id: "germany", quatity: 10 };
 
-/* EXERCISE 14
+console.log("ken array", addToShoppingCart(newOrder));
+writeLine("EXERCISE 14");
+/*
 In your eCommerce you have an array of objects called shoppingCart. In this array you have a number of objects with a price, a name, an id and the quantity to be shipped.
 Create a function "maxShoppingCart" which receives the shoppingCart array and returns the most expensive item in the array.
 */
 
 /* WRITE YOUR CODE HERE */
-
-/* EXERCISE 15
+writeLine("EXERCISE 15");
+/* 
 In your eCommerce you have an array of objects called shoppingCart. In this array you have a number of objects with a price, a name, an id and the quantity to be shipped.
 Create a function "latestShoppingCart" which receives the shoppingCart array and returns the last item.
 */
 
 /* WRITE YOUR CODE HERE */
-
-/* EXERCISE 16
+writeLine("EXERCISE 16");
+/* 
 Create a function "loopUntil" which receives an integer x between 0 and 9.
 The function loops and prints a random number between 0 and 9 until the random number is bigger than x for three times in a row.
 */
 
 /* WRITE YOUR CODE HERE */
-
-/* EXERCISE 17
+writeLine("EXERCISE 17");
+/* 
 Write a function "average" which receives an array and return the average value. The function automatically skips non-numeric entries in the array.
 */
 
 /* WRITE YOUR CODE HERE */
-
-/* EXERCISE 18
+writeLine("EXERCISE 18");
+/* 
 Write a function "longest" to find the longest string from an given array of strings.
 */
 
 /* WRITE YOUR CODE HERE */
-
-/* EXERCISE 19
+writeLine("EXERCISE 19");
+/*
 Write a function to create a very simple anti spam filter for your mailbox. The function takes a string emailContent, and returns a boolean.
 Check if the email is valid using string methods. The email (in this example) is valid if the words SPAM and SCAM does not appear.
 */
 
 /* WRITE YOUR CODE HERE */
-
-/* EXERCISE 20
+writeLine("EXERCISE 20");
+/* 
 Write a function that receives a date d as parameter and calculates the number of days passes since the d.
 */
 
 /* WRITE YOUR CODE HERE */
-
-/* EXERCISE 21
+writeLine("EXERCISE 21");
+/*
 Write a function "matrixGenerator" that receives x and y as parameter. The result should be a matrix of x times y with, as value, the index of the position.
 Ex.: X = 3, Y = 2
 ["00","01","02"
