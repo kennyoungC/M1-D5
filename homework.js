@@ -19,7 +19,7 @@ let area = function (l1, l2) {
 };
 let length = 4;
 let width = 7;
-let myans = area(length, width);
+console.log(area(length, width));
 
 writeLine("EXERCISE 2");
 /*
@@ -39,20 +39,6 @@ let crazySum = function (int1, int2) {
 let firstNumber = 10;
 let secondNumber = 6;
 crazySum(firstNumber, secondNumber);
-
-// const crazySum = function (num1, num2) {
-//   intNum1 = parseInt(num1);
-//   intNum2 = parseInt(num2);
-
-//   if (intNum1 === intNum2) {
-//     let multBy3 = (intNum1 + intNum2) * 3;
-//     console.log(multBy3);
-//   } else {
-//     let justSum = intNum2 + intNum2;
-//     console.log(justSum);
-//   }
-// };
-// crazySum(2, 2);
 
 writeLine("EXERCISE 3");
 /* 
@@ -93,17 +79,17 @@ Write a function "strivify" which accepts a string.
 It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
 
-// let strivify = function (inString) {
-//   if (inString === "Strive") {
-//     console.log(inString);
-//   } else {
-//     let striveFront = "Strive";
-//     console.log(striveFront.concat(" ", inString));
-//   }
-// };
-// strivify("strive house");
-// writeLine("EXERCISE 6");
-// /*
+let strivify = function (inString) {
+  if (inString === "Strive") {
+    console.log(inString);
+  } else {
+    let striveFront = "Strive";
+    console.log(striveFront.concat(" ", inString));
+  }
+};
+strivify("strive house");
+writeLine("EXERCISE 6");
+/*
 Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
 HINT: Module Operator
 */
@@ -119,26 +105,56 @@ writeLine("EXERCISE 7");
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
 
-/* WRITE YOUR CODE HERE */
+let reverseString = function (givenString) {
+  let newString = "";
+  for (let i = givenString.length - 1; i >= 0; i--) {
+    newString += givenString[i];
+  }
+  return newString;
+};
+console.log(reverseString("kenneth junior"));
+
 writeLine("EXERCISE 8");
 /* 
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
-
-/* WRITE YOUR CODE HERE */
+function upperFirst(str) {
+  let words = str.toLowerCase().split(" ");
+  console.log(words);
+  for (i = 0; i < words.length; i++) {
+    // console.log(words[i]);
+    // console.log(words[i].charAt(0));
+    words[i] = words[i].charAt(0).toUpperCase() + words[i].substring(1);
+  }
+  return words.join(" ");
+}
+console.log(upperFirst("yusuf is a fine boy"));
 writeLine("EXERCISE 9");
 /*
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
 
-/* WRITE YOUR CODE HERE */
+let cutString = function (str3) {
+  let result = str3.slice(1, str3.length - 1);
+  return result;
+};
+
+console.log(cutString("hello"));
 writeLine("EXERCISE 10");
 /*
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 
-/* WRITE YOUR CODE HERE */
+let giveMeRandom = function (n) {
+  let randonArray = [];
 
+  for (i = 0; i <= n; i++) {
+    let n = Math.floor(Math.random() * 11);
+    return randonArray.push(n);
+    console.log(randonArray);
+  }
+};
+giveMeRandom();
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit in Eduflow.
 */
