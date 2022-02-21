@@ -187,7 +187,8 @@ const giveMeRandom = (n) => {
   }
   return arr;
 };
-console.log(giveMeRandom(2));
+
+console.log(giveMeRandom(6));
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit in Eduflow.
 */
