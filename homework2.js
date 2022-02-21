@@ -126,13 +126,23 @@ writeLine("EXERCISE 17");
 /* 
 Write a function "average" which receives an array and return the average value. The function automatically skips non-numeric entries in the array.
 */
-// let avg = 0;
-// const average = (arr) => {
-//   for (let i = 0; (i = arr.length); i++) console.log(arr.length);
-//   if (typeof arr.length === "string") return (avg + arr[i]) / arr.length;
-// };
-// let myArr = [3, 5, 29, 7, "bukky", "stanley"];
-// console.log(average(myArr));
+function average(arr) {
+  let result = {
+    sum: 0,
+    avgArr: [],
+    avg: 0,
+  };
+  for (i = 0; i < arr.length; i++) {
+    let newArr = arr[i];
+    if (!isNaN(newArr)) {
+      result.avgArr.push(parseInt(newArr));
+      result.sum += parseInt(newArr);
+      result.avg = parseInt(result.sum) / result.avgArr.length;
+    }
+  }
+  return result;
+}
+console.log(average([2, 3, 5, 9, "aunty", "yusuf"]));
 writeLine("EXERCISE 18");
 /* 
 Write a function "longest" to find the longest string from an given array of strings.
@@ -170,7 +180,13 @@ writeLine("EXERCISE 20");
 Write a function that receives a date d as parameter and calculates the number of days passes since the d.
 */
 
-/* WRITE YOUR CODE HERE */
+//function howManyDays(selectedDate) {
+//   let today = new Date();
+//   let difference = today - selectedDate;
+//   return difference / (1000 * 60 * 60 * 24);
+// }
+// console.log(howManyDays(12));
+
 writeLine("EXERCISE 21");
 /*
 Write a function "matrixGenerator" that receives x and y as parameter. The result should be a matrix of x times y with, as value, the index of the position.
