@@ -78,24 +78,32 @@ In your eCommerce you have an array of objects called shoppingCart. In this arra
 Create a function "maxShoppingCart" which receives the shoppingCart array and returns the most expensive item in the array.
 */
 const maxShoppingCart = (arr) => {
-  for (let i = 0; i < arr.length; i++)
-    if (
-      arraysOfObject[0].price > arraysOfObject[1].price &&
-      arraysOfObject[0].price > arraysOfObject[2].price
-    ) {
-      return `${arraysOfObject[0].price} in this shipping has the most expensive price in this array`;
-    } else if (
-      arraysOfObject[1].price > arraysOfObject[0].price &&
-      arraysOfObject[1].price > arraysOfObject[2].price
-    ) {
-      return `${arraysOfObject[1].price} in this shipping has the most expensive price in this array`;
-    } else if (
-      arraysOfObject[2].price > arraysOfObject[0].price &&
-      arraysOfObject[2].price > arraysOfObject[1].price
-    ) {
-      return `${arraysOfObject[2].price} in this shipping has the most expensive price in this array`;
-    }
+  let p = [];
+  for (let i = 0; i < arr.length; i++) {
+    let array = arr[i];
+    p.push(parseInt(array.price));
+  }
+  return Math.max(...p);
 };
+console.log(maxShoppingCart(arraysOfObject));
+// for (let i = 0; i < arr.length; i++)
+// if (
+//   arraysOfObject[0].price > arraysOfObject[1].price &&
+//   arraysOfObject[0].price > arraysOfObject[2].price
+// ) {
+//   return `${arraysOfObject[0].price} in this shipping has the most expensive price in this array`;
+// } else if (
+//   arraysOfObject[1].price > arraysOfObject[0].price &&
+//   arraysOfObject[1].price > arraysOfObject[2].price
+// ) {
+//   return `${arraysOfObject[1].price} in this shipping has the most expensive price in this array`;
+// } else if (
+//   arraysOfObject[2].price > arraysOfObject[0].price &&
+//   arraysOfObject[2].price > arraysOfObject[1].price
+// ) {
+//   return `${arraysOfObject[2].price} in this shipping has the most expensive price in this array`;
+// }
+// };
 console.log(maxShoppingCart(arraysOfObject));
 // what if we had more than 3 items in an array?
 writeLine("EXERCISE 15");
